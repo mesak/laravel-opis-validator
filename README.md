@@ -4,7 +4,21 @@ Laravel FormRequest With Opis JSON Schema Validator
 
 Use [Opis JSON Schema](https://github.com/opis/json-schema) to validate your laravel form requests.
 
+# installation
 
+```bash
+composer require mesak/laravel-opis-validator
+```
+
+Or you could directly reference it into your `composer.json` file as a dependency
+  
+```json
+{
+    "require": {
+        "mesak/laravel-opis-validator": "^1.0.0"
+    }
+}
+```
 ## Example
 
 ### Requests
@@ -76,7 +90,6 @@ use App\Http\Requests\JsonSchema as JsonSchemaRequest;
 ```
 
 use postman to test your request.
-
 
 ```
 curl --location --request POST 'http://localhost/test/update' \
