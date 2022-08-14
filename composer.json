@@ -1,0 +1,29 @@
+{
+    "name": "mesak/laravel-opis-validator",
+    "description": "Laravel FormRequest With Opis Validator",
+    "keywords": [
+        "laravel",
+        "json",
+        "schema",
+        "json-schema",
+        "validation",
+        "validator"
+    ],
+    "require": {
+        "opis/json-schema": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mesak\\LaravelOpisValidator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mesak",
+            "email": "mesakey@gmail.com",
+            "homepage": "https://github.com/mesak"
+        }
+    ],
+    "minimum-stability": "stable"
+}
