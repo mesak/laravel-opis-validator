@@ -10,7 +10,9 @@
         "validator"
     ],
     "require": {
-        "opis/json-schema": "^2.0"
+        "php": "^7.3|^8.0",
+        "opis/json-schema": "^2.0",
+        "illuminate/support": "^8.0|^9.0"
     },
     "license": "MIT",
     "autoload": {
@@ -25,5 +27,5 @@
             "homepage": "https://github.com/mesak"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
