@@ -75,6 +75,22 @@ class JsonSchema extends JsonSchemaRequest
             ]
         ];
     }
+    protected function prepareForValidation()
+    {
+        //clear urlencoded data from request 
+        //input integer is not allowed in json schema
+        $intance = $this->getValidatorInstance();
+        foreach ($intance->getRules() as $key => $rule) {
+            $inputValue = $this->input($key);
+            if ($rule == 'integer' && preg_match('/\d+/', $inputValue)) {
+                $this->merge([
+                $key => intval($inputValue),
+                ]);
+            }
+        }
+        $intance->setData($this->all());
+    }
+}
 ```
 
 

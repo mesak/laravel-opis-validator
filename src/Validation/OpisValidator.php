@@ -177,7 +177,8 @@ class OpisValidator extends BaseValidator
     $result = [];
     if ($properties instanceof \stdClass) {
       foreach ((array) $properties as $key => $value) {
-        $result[$key] = [];
+        // $result[$key] = [];
+        $result[$key] = $value->type ?? '';
         if (property_exists($value, 'properties')) {
           $result[$key] = $this->getSchemaProperties($value->properties);
         }
