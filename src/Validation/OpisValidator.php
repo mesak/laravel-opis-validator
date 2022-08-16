@@ -61,8 +61,10 @@ class OpisValidator extends BaseValidator
   public function setRules(array $rules)
   {
     $objectRules =  Helper::toJSON($rules);
-    $this->schema = $this->validator->loader()->loadObjectSchema($objectRules); //change to object schema
-    $this->rules = $this->getSchemaDataKeys($this->schema->info());
+    if (is_object($objectRules)) {
+      $this->schema = $this->validator->loader()->loadObjectSchema($objectRules); //change to object schema
+      $this->rules = $this->getSchemaDataKeys($this->schema->info());
+    }
     return $this;
   }
 
